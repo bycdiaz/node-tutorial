@@ -1,17 +1,9 @@
 const express = require('express');
 const router = express.Router();
+const storeController = require('../controllers/storeController');
 
-router.get('/', (req, res) => {
-  res.render('hello', {
-    name: 'Carlos',
-    dog: 'Chispa',
-    title: 'I Love Food'
-  });
-});
-
-router.get('/reverse/:name', (req, res) => {
-  const reverse = [...req.params.name].reverse().join('');
-  res.send(reverse);
-});
+// we identify the URL with the first argument, 2nd handles the work of hitting route
+// off in the controller
+router.get('/', storeController.homePage)
 
 module.exports = router;
