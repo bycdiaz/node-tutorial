@@ -5,7 +5,7 @@ router.get('/', (req, res) => {
   res.render('hello', {
     name: 'Carlos',
     dog: 'Chispa',
-    title: 'Test'
+    title: 'I Love Food'
   });
 });
 
