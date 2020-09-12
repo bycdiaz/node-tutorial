@@ -4,6 +4,6 @@ const storeController = require('../controllers/storeController');
 
 // we identify the URL with the first argument, 2nd handles the work of hitting route
 // off in the controller
-router.get('/', storeController.homePage)
+router.get('/', storeController.myMiddleware, storeController.homePage);
 
 module.exports = router;
