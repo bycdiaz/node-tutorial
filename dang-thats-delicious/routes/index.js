@@ -1,17 +1,12 @@
 const express = require('express');
 const router = express.Router();
 
-// Do work here
 router.get('/', (req, res) => {
-  const carlos = {
+  res.render('hello', {
     name: 'Carlos',
-    age: 100,
-    cool: true,
-  };
-  // res.send('Hey! It works!');
-  // res.json(carlos);
-  // res.send(req.query.name);
-  res.json(req.query)
+    dog: 'Chispa',
+    title: 'Test'
+  });
 });
 
 router.get('/reverse/:name', (req, res) => {
