@@ -3,3 +3,7 @@ exports.homePage = (req, res) => {
     title: 'Cool'
   });
 }
+
+exports.addStore = (req, res) => {
+  res.render('editStore', { title: 'Add Store' });
+}
